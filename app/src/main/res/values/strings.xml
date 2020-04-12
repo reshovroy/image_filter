@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">FilterFly</string>
+    <string name="FILTER_MATRIX">FILTER_MATRIX</string>
+    <string name="FILTER_GRAY">FILTER_GRAY</string>
+    <string name="FILTER_NEGATIVE">FILTER_NEGATIVE</string>
+    <string name="APP_DESCRIPTION">A simple app making use of spatial matrix filters to demonstrate the effects of image convolution  .</string>
+
+    <item name="ed_mat_0" type="id"/>
+    <item name="ed_mat_1" type="id"/>
+    <item name="ed_mat_2" type="id"/>
+    <item name="ed_mat_3" type="id"/>
+    <item name="ed_mat_4" type="id"/>
+    <item name="ed_mat_5" type="id"/>
+    <item name="ed_mat_6" type="id"/>
+    <item name="ed_mat_7" type="id"/>
+    <item name="ed_mat_8" type="id"/>
+    <item name="ed_mat_9" type="id"/>
+
+</resources>
