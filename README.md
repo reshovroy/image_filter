@@ -23,10 +23,13 @@ This app uses simple 2D Filters to implement blur, sharpening, edge detection et
 The app uses Image convolution to apply 2D filters on images. There are a lot of predefined filters such as **sobel, gaussian, laplacian filters** etc, it consists of taking an odd sized matrix and using it to calculate the value of each individual pixel by also taking into consideration its neighbourhood pixel values. The size of the neighbourhood and the weightage given to each pixel is specified by the 2d matrix filter.
 
 A simple **identity 3x3 filter** would be one which does not take into consideration any neighbourhood pixels
-$$\begin{pmatrix} 0 & 0 & 0 \\0 & 1 & 0\\0 & 0 & 0 \end{pmatrix}$$
+
+<!--$$\begin{pmatrix} 0 & 0 & 0 \\0 & 1 & 0\\0 & 0 & 0 \end{pmatrix}$$-->
+<img src="https://latex.codecogs.com/png.latex?\bg_white&space;\begin{pmatrix}&space;0&space;&&space;0&space;&&space;0&space;\\0&space;&&space;1&space;&&space;0\\0&space;&&space;0&space;&&space;0&space;\end{pmatrix}" title="\begin{pmatrix} 0 & 0 & 0 \\0 & 1 & 0\\0 & 0 & 0 \end{pmatrix}" />
 
 A **gaussian blurring filter** takes into account the neighbourhood pixels and weights them based on distance
-$$\frac{1}{16} \begin{pmatrix} 1 & 2 & 1 \\2 & 4 & 2\\1 & 2 & 1 \end{pmatrix}$$
+<!-- $$\frac{1}{16} \begin{pmatrix} 1 & 2 & 1 \\2 & 4 & 2\\1 & 2 & 1 \end{pmatrix}$$ -->
+<img src="https://latex.codecogs.com/png.latex?\bg_white&space;\frac{1}{16}&space;\begin{pmatrix}&space;1&space;&&space;2&space;&&space;1&space;\\2&space;&&space;4&space;&&space;2\\1&space;&&space;2&space;&&space;1&space;\end{pmatrix}" title="\frac{1}{16} \begin{pmatrix} 1 & 2 & 1 \\2 & 4 & 2\\1 & 2 & 1 \end{pmatrix}" />
 
 Using the slider with values between 1 to 100 we can use basic linear interpolation to get an intermediary effect for the filter.
 
@@ -34,8 +37,10 @@ For eg, consider applying the above gaussian filter. At value 0 we have our *ide
 
 #### slider value:
 0 -> 50 -> 100
-$$\begin{pmatrix} 0 & 0 & 0 \\0 & 1 & 0\\0 & 0 & 0 \end{pmatrix} \rightarrow \frac{1}{8}\begin{pmatrix} 0.5 & 1 & 0.5 \\1 & 2 & 1\\0.5 & 1 & 0.5 \end{pmatrix} \rightarrow \frac{1}{16} \begin{pmatrix} 1 & 2 & 1 \\2 & 4 & 2\\1 & 2 & 1 \end{pmatrix}$$
 
+Identity (0) | Intermediate (50) | Final (100)
+------------- | ----------------- | -------------
+<img src="https://latex.codecogs.com/png.latex?\bg_white&space;\begin{pmatrix}&space;0&space;&&space;0&space;&&space;0&space;\\0&space;&&space;1&space;&&space;0\\0&space;&&space;0&space;&&space;0&space;\end{pmatrix}" title="\begin{pmatrix} 0 & 0 & 0 \\0 & 1 & 0\\0 & 0 & 0 \end{pmatrix}" /> | <img src="https://latex.codecogs.com/png.latex?\bg_white&space;\frac{1}{8}\begin{pmatrix}&space;0.5&space;&&space;1&space;&&space;0.5&space;\\1&space;&&space;2&space;&&space;1\\0.5&space;&&space;1&space;&&space;0.5&space;\end{pmatrix}" title="\frac{1}{8}\begin{pmatrix} 0.5 & 1 & 0.5 \\1 & 2 & 1\\0.5 & 1 & 0.5 \end{pmatrix}" /> | <img src="https://latex.codecogs.com/png.latex?\bg_white&space;\frac{1}{16}&space;\begin{pmatrix}&space;1&space;&&space;2&space;&&space;1&space;\\2&space;&&space;4&space;&&space;2\\1&space;&&space;2&space;&&space;1&space;\end{pmatrix}" title="\frac{1}{16} \begin{pmatrix} 1 & 2 & 1 \\2 & 4 & 2\\1 & 2 & 1 \end{pmatrix}" />
 
 
 
